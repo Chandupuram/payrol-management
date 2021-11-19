@@ -1,0 +1,10 @@
+MYSQL DATABASE CODE: 
+
+create database project;
+use project;
+create table logs(emp_id int ,status varchar(9),date varchar(25),time varchar(30));
+create table allowance(leaves varchar(3),hike varchar(15),bonus varchar(10),overtime varchar(10),emp_id int not null,first_name varchar(20),phno varchar(10),final_pay varchar(20),medical varchar(20),deductions varchar(20),status varchar(15) default 'not paid');
+create table employee_info(emp_id int primary key,first_name varchar(20) not null,last_name varchar(20) not null,gender varchar(10) not null,dob varchar(10) not null,phno varchar(10) not null,email varchar(30) not null,address varchar(20) not null,city varchar(20) not null,designation varchar(20) not null,basic_pay varchar(15) not null,startdate varchar(20) not null,accno decimal(16,0) not null,pan varchar(15) not null);
+create table user(username varchar(20),password varchar(20),role varchar(10));
+create table leaves(emp_id int not null,days int not null,from_date varchar(10),to_date varchar(10),reason varchar(100));
+create table month_details(allowance_id int primary key auto_increment ,emp_id int,emp_name varchar(30),email varchar(30),designation varchar(30),basic_pay varchar(15),deduction varchar(15),total_pay varchar(15));
