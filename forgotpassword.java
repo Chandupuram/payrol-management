@@ -138,8 +138,8 @@ public class forgotpassword extends javax.swing.JFrame {
       
       
       ///mailcode add 
-      final String username = "sekharchandrapuram03@gmail.com";
-      final String password = "iwanngojhygupuzn";
+      final String username = "from@gmail.com";
+      final String password = "app password";
 
       Properties props = new Properties();
       props.put("mail.smtp.starttls.enable", "true");
@@ -157,7 +157,7 @@ public class forgotpassword extends javax.swing.JFrame {
       try {
 
           Message message = new MimeMessage(session);
-          message.setFrom(new InternetAddress("sekharchandrapuram03@gmail.com"));
+          message.setFrom(new InternetAddress("toname@gmail.com"));
           message.setRecipients(Message.RecipientType.TO,
               InternetAddress.parse(to2));//add
           message.setSubject("RESET PIN");
